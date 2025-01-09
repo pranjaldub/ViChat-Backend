@@ -13,4 +13,5 @@ xlrd
 werkzeug
 pyngrok
 docx2txt
+tiktoken
 gunicorn==20.1.0
