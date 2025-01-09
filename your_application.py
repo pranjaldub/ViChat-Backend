@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 #ngrok.set_auth_token("2qzSERs6P1tPui4MKH5mxcyU2sg_24ypr8YvfSMPWDaJdSRRc")
 
 # Flask app setup
-app = Flask(__name__)
+your_application = Flask(__name__)
 
 # Define max token limit
 MAX_TOKENS = 16385  # Maximum tokens for a model like GPT-3.5
@@ -199,7 +199,7 @@ def chatbot():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000,debug=True)
+    your_application.run(host="0.0.0.0", port=5000,debug=True)
 
    # public_url = ngrok.connect(5000)
     #print(f"Ngrok tunnel opened at: {public_url}")
