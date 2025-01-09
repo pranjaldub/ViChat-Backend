@@ -46,7 +46,7 @@ def download_file(url):
         response = requests.get(url)
         if response.status_code == 200:
             file_name = url.split("/")[-1]
-            file_path = f"/kaggle/working/{file_name}"
+            file_path = os.path.join("/tmp", file_name)
             with open(file_path, "wb") as f:
                 f.write(response.content)
             return file_path
