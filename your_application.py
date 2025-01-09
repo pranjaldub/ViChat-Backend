@@ -134,7 +134,7 @@ def setup_qa(documents):
         logger.error(f"Error setting up Q&A: {str(e)}")
         raise
 
-@app.route("/chat", methods=["POST"])
+@your_application.route("/chat", methods=["POST"])
 def chat():
     try:
         query = request.json.get("question")
@@ -174,7 +174,7 @@ def chat():
         return jsonify({"error": f"An error occurred: {str(e)}"}), 500
 
 
-@app.route("/chatbot", methods=["POST"])
+@your_application.route("/chatbot", methods=["POST"])
 def chatbot():
     """
     Endpoint for normal chatting with an LLM.
