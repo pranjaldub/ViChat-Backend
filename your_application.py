@@ -22,7 +22,7 @@ import openai
 # Set your OpenAI API key
 
 import os
-openai.api_key = os.getenv("openai_api_key")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Set up logging for error tracking
 logging.basicConfig(level=logging.DEBUG)
