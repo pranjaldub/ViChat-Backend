@@ -7,6 +7,7 @@ import tempfile
 from io import BytesIO
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain_unstructured import UnstructuredLoader
 
@@ -33,6 +34,7 @@ logger = logging.getLogger(__name__)
 
 # Flask app setup
 your_application = Flask(__name__)
+CORS(your_application, resources={r"/*": {"origins": "*"}})  # Allow all origins
 
 # Define max token limit
 MAX_TOKENS = 16385  # Maximum tokens for a model like GPT-3.5
