@@ -14,4 +14,5 @@ werkzeug
 pyngrok
 docx2txt
 tiktoken
+flask_cors
 gunicorn==20.1.0
